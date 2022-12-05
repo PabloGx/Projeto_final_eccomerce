@@ -1,0 +1,201 @@
+.carousel-caption{
+    position: absolute;
+    top:50%;
+    left: 10%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    right: auto;
+    bottom: auto;
+    text-align: left;
+    transform: translateY(-50%);
+}
+.carousel-caption h6{
+    font-size: 1.5rem;
+    font-weight: 100;
+    color:gold;
+
+}
+
+.carousel-caption h6 {
+    font-size: 3rem;
+    
+}
+.carousel-caption h4 {
+    font-size: 4rem;   
+}
+.carousel-caption a{
+border: 1px solid #fff;
+color: #fff;
+padding: 0.8rem 1.5rem;
+display: inline-block;
+font-size: 1.2rem;
+margin-top: 2rem;
+transition: all 0.3s;
+}
+
+.delivery-flow{
+    padding: 3rem 0 0 0;
+}
+.delivery-flow i{
+    font-size: 1.5rem;
+    border-radius: 50%;
+    border: 1px solid #999;
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    line-height: 55px;
+}
+.delivery-flow h6{
+    font-weight: 600;
+}
+.delivery-flow p{
+    margin-bottom: 0;
+}
+
+.seller-bg1{
+    background: rgb(49, 159, 167);
+    color: #fff;
+}
+.seller-card-content h5{
+    font-size: 1.7rem;
+}
+.seller-card-content a{
+    color: #fff;
+    text-decoration: underline;
+    display: inline-block;
+    margin-top: 2rem;
+}
+.seller-card-img{
+    width: 300px;
+}
+.best-seller-section
+.card-body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+}
+
+.seller-bg2{
+    background: rgb(93, 170, 20);
+    color: #fff;
+}
+/*-------------*/
+.product-card{
+    transition: all 0.5s ease-in-out;
+    min-height: 380px;
+    
+}
+
+.discount-badge{
+    position: absolute;
+    background: #000;
+    color: #fff;
+    font-size: 0.8rem;
+    top:10px;
+    right: 10px;
+    padding: 0.2rem 0.8rem;
+    z-index: 9;
+    font-weight: 400;
+}
+.prod-card-img{
+    width: 250px;
+    margin: auto;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+}
+.prod-card-img img {
+    max-width: 100%;
+    width: 100%;
+    transform: scale(0.9);
+    transition: all 0.5s ease-in-out;
+    
+}
+
+
+.product-card:hover .prod-card-img img{
+    transform: scale(1);
+}
+
+.prod-buy-btn{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 0;
+    padding: 0.4rem 1rem !important;
+    border: 1px solid #999;
+    font-size: 0.875rem;
+    color: #000;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+.product-card:hover .prod-buy-btn{
+    opacity: 1;
+    visibility: visible;
+    bottom: 20px;
+}
+.pord-card-content{
+    margin-bottom: 2.5rem;
+}
+.item-name{
+    text-align: center;
+    font-size: 1rem;
+    padding: 1rem 0 0 0;
+}
+.item-name p{
+    margin-bottom: 0.5rem;
+}
+.prod-card-footer{
+    text-align: center;
+    position: relative;
+    padding-bottom: 2rem;    
+}
+.prod-price{
+    text-align: center;
+    font-size: 1rem;
+    padding:0 0.8rem;
+} 
+.disabled-amount{
+    text-decoration: line-through;
+    color: #666;
+    font-weight: 100;
+}
+.prod-real-amt{
+    color: #000;
+    font-weight: 400;
+}
+
+.offer-banner{
+    background-image: url(../image/Banner\ Black\ Ofertas\ Preços\ Baixos.png);
+    background-attachment:fixed;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+}
+.offer-banner-content{
+    text-align: right;
+    padding-top: 6rem;
+}
+.sale-tag{
+    font-size: 5rem;
+    color: #0aff38;
+}
+.offer-banner-content p{
+    color: white;
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+
+
+.offer-banner-content a{
+    border:2px solid white ;
+    color: white;
+    padding: 0.5rem 2rem;
+    display: inline-block;
+    margin: 2rem;
+    transition: all 0.3s;
+}

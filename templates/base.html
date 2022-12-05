@@ -1,0 +1,181 @@
+{% load static%}
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <title>{% block titulo%}{% endblock %}</title>
+  
+  {% include 'parciais/_head.html'%}
+</head>
+
+<body>
+  {% include 'parciais/_header-nav.html'%}
+
+  <main class="flex-wrap">
+    <section class="banner-card-section ">
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        {% include 'parciais/_messages.html'%}
+        
+        <div class="carousel-inner">
+          
+          <div class="carousel-item active">
+            <img src="{% static 'image/adhesive-vinyl-material.jpg' %}" class="d-block w-100" alt="...">
+            <div class="carousel-caption ">
+              <div class="animate__animated  animate__fadeInLeft animate__delay-1s">
+
+                <h6><span>50%</span> OFF</h6>
+                <h4>Adidas Casual Shoes</h4>
+                <p>Representative | Slide</p>
+              </div>
+              <a href="" class="animate__animated  animate__fadeInTopRight animate__delay-1s">Compre agora</a>
+            </div>
+          </div>
+          
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+     </section>
+  
+     <section class="delivery-flow">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="media d-flex align-content-center">
+              <i class="bi bi-send"></i>
+              <div class="media-body ms-2">
+                <h6 class="mt-0">Envio rápido</h6>
+                <p>seg - sab</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="media d-flex align-content-center">
+              <i class="bi bi-pin-map"></i>
+              <div class="media-body ms-2">
+                <h6 class="mt-0">Retire no local</h6>
+                <p>Nossa feira</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="media d-flex align-content-center">
+              <i class="bi bi-alarm"></i>
+              <div class="media-body ms-2">
+                <h6 class="mt-0">Entregas de</h6>
+                <p>8:00 - 15:00</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="media d-flex align-content-center">
+              <i class="bi bi-whatsapp"></i>
+              <div class="media-body ms-2">
+                <h6 class="mt-0">Atendimento</h6>
+                <p>8:00 - 15:00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </section>
+  
+     <section class="best-seller-section pb-5 pt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mb-4">
+            <div class="card seller-bg1">
+              <div class="card-body">
+                <div class="seller-card-content">
+                  <p>Best seller</p>
+                  <h5>Adidas Fine Shoe</h5>
+                  <a href="">Buy Now</a>
+                </div>
+                <div class="seller-card-img">
+                  <img src="../image/12-men-shoes-png-image.png" alt="" class="img-fluid">
+  
+                </div>
+               
+              </div>
+              
+            </div>
+          </div>
+  
+          <div class="col-lg-6 mb-4">
+            <div class="card seller-bg2">
+              <div class="card-body">
+                <div class="seller-card-content">
+                  <p>Best seller</p>
+                  <h5>Adidas Fine Shoe</h5>
+                  <a href="">Buy Now</a>
+                </div>
+                <div class="seller-card-img">
+                  <img src="../image/12-men-shoes-png-image.png" alt="" class="img-fluid">
+  
+                </div>
+               
+              </div>
+              
+            </div>
+          </div>
+  
+          
+        </div>
+      </div>
+     </section>
+  
+     <section class="feature-products">
+      <div class="container">
+        <div class="row">
+          <h2 class="heading-title mb-3">Feature products</h2>
+          {% block conteudo%}{%endblock%}
+          
+        </div>
+      </div>
+     </section>
+
+     <div class="row">
+      <div class="col">
+        {% include 'parciais/_pagination.html'%}
+      </div>
+     </div>
+
+     <section class="offer-banner">
+      <div class="container">
+        <div class="col-md-8 offset-md-2">
+          <div class="offer-banner-content">
+            <span class="sale-tag">50% OFF</span>
+            <h4>Queima de estoque</h4>
+            <p>Diversos Produtos</p>
+            <a href="">Compre agora</a>
+          </div>
+        </div>
+      </div>
+     </section>
+     
+     <br><br><br><br>
+
+    
+    
+  </main>
+  
+  {% include 'parciais/_footer.html'%}
+
+</body>
+
+</html>

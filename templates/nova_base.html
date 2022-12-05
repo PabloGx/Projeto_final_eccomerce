@@ -1,0 +1,24 @@
+{% load static%}
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <title>{% block titulo%}{% endblock %}</title>
+  
+  {% include 'parciais/_head.html'%}
+</head>
+
+<body>
+  {% include 'parciais/_header-nav.html'%}
+
+  <main class="flex-wrap">
+    {% include 'parciais/_messages.html'%}
+    {% block conteudo%}{%endblock%}
+    
+  </main>
+  
+  {% include 'parciais/_footer.html'%}
+
+</body>
+
+</html>

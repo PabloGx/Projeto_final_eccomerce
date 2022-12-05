@@ -1,0 +1,35 @@
+{%extends 'base.html'%}
+
+
+{% block conteudo %}
+  {%for produto in produtos%}
+<div class="col-md-6 col-lg-4 col-xl-3">
+    <div class="card product-card">
+     <span class="discount-badge">Save 50%</span>
+     <div class="prod-card-img">
+        {%if produto.imagem%}
+        <a href="{{produto.slug}}">
+       <img src="{{ produto.imagem.url }}" alt="{{ produto.nome }}" class="img-fluid"></a>
+       {%endif%}
+     </div>
+     <a href="{{produto.slug}}" class="prod-buy-btn">Comprar</a>
+    </div>
+    <div class="prod-card-content">
+     <div class="item-name">
+       <p>{{ produto.nome }}</p>
+     </div>
+     <div class="prod-card-footer">
+       <div class="prod-price"></div>
+
+       {% if produto.preco_marketing_promocional%}
+       <span class="disabled-amount">>{{produto.preco_marketing}}</span>
+       <span class="prod-real-amt">por <strong>{{produto.preco_marketing_promocional}}</strong></span>
+       {%else%}
+       <span class="prod-real-amt"><strong> <span class="disabled-amount">>{{produto.preco_marketing}}</strong></span>
+       {%endif%}
+     </div>
+    </div>
+ </div>
+ {%endfor%}]
+ <div class="hq"></div>
+{%endblock%}

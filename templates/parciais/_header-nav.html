@@ -1,0 +1,174 @@
+{% load static %}
+<header>
+    <div class="topbar">
+     <div class="container-xxl">
+       <div class="row">
+         <div class="col-md-5">
+           <div class="top-left">
+             <span class="badge bg-info text-dark">Novo</span>
+             <a href="">Promoções imperdíveis! Clique aqui</a>
+           </div>
+         </div>
+         <div class="col-md-7 ">
+           <div class="top-right">
+             <ul class="rightElement">
+               <li>
+                 <a href="">
+                   <i class="bi bi-geo-alt-fill"> Locais de venda</i>
+                 </a>
+               </li>
+ 
+               <li>
+                 <a href="">
+                   <i class="bi bi-file-text"> Rastreie aqui</i>
+                 </a>
+               </li>
+               
+             </ul> 
+ 
+             <div class="myAccount-nav">
+               <span><a href=""><i class="bi bi-gear"> Sua conta</i></a></span>
+               <ul class="myAccount-dropdown">
+                 <li>
+                   <a href="">Orders</a>
+                 </li>
+ 
+                 <li>
+                   <a href="">My profile</a>
+                 </li>
+ 
+                 <li>
+                   <a href="">Logout</a>
+                 </li>
+               </ul>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+    </div>
+ 
+    <div class="header-middle">
+     <div class="container-xxl">
+       <div class="row">
+         <div class="col-md-3 col-lg-3 position-relative">
+           <div class="logo">
+           Poti<span>Eco</span>
+           </div>
+ 
+           <div id="poti"><i class="bi bi-text-paragraph"><p id="dica">menu</p></i></div>
+         </div>
+ 
+         <div class="col-md-12 col-lg-5 search-order">
+           <div class="header-search">
+             <form>
+                 <div class="input-group mb-3">
+                   <input type="text" class="form-control" placeholder="Pesquise produtos aqui">
+                   <div class="input-group-append">
+                     <button class="btn btn-secondary btn-bg">
+                       <i class="bi bi-search"></i>
+                     </button>
+                   </div>
+               </div>
+             </form>
+           </div>
+         </div>
+ 
+         <div class="col-md-9 col-lg-4">
+           <div class="middle-header-right">
+ 
+             <div class="sign-register">
+               <i class="bi bi-person"></i>
+               <p><a href="">Cadastre-se</a><br> ou <a href="">Entre</a></p>
+               
+             </div>
+ 
+             <div class="wishlist-widget">
+               <a href="">
+                 <i class="bi bi-heart"></i>
+               </a>
+             </div>
+ 
+             <div class="my-cart-widget">
+               <button class="btn position-relative">
+                 <i class="bi bi-bag"></i>
+                 <span class="position-absolute translate-middle badge rounded-pill bg-success mt-4 ms-0">5</span>
+               </button>
+               <span>Carrinho</span>
+               
+               <div class="my-cart-list">
+                 <ul>
+                   <li>
+                     <a href="">
+                       <img src="{% static 'image/images.jpg'%}" alt="" class="cart-prod-img">
+                       <h6>Adiddas Maxximum Confort</h6>
+                       <div class="cart-prod-rate">R$ 29,90</div>
+                     </a>
+                   </li>
+ 
+                   <li>
+                     <a href="">
+                       <img src="{% static 'image/images.jpg'%}" alt="" class="cart-prod-img">
+                       <h6>Adiddas Maxximum Confort</h6>
+                       <div class="cart-prod-rate">R$ 29,90</div>
+                     </a>
+                   </li>
+                 </ul>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+    </div>
+ 
+    <nav>
+     <div class="container-xxl">
+       <div class="nav-collapse">
+         <div id="closeBtn">X</div>
+         <ul class="custom-nav">
+           <li class="cst-nav-item">
+             <a href="{% url 'produto:lista'%}" class="cst-nav-link">Página inicial</a>
+           </li>
+           <li class="cst-nav-item cst-dropdown">
+             <a href="" class="cst-nav-link">Nossos produtos<i class="bi bi-chevron-down"></i></a>
+             <ul class="cst-dropdown-menu">
+               <li>
+                 <a href="" class="cst-dropdown-link">Cereais, pães e tubérculos</a>
+               </li>
+ 
+               <li>
+                 <a href="" class="cst-dropdown-link">Hortaliças</a>
+               </li>
+ 
+               <li>
+                 <a href="" class="cst-dropdown-link">Carnes</a>
+               </li>
+ 
+               <li>
+                 <a href="" class="cst-dropdown-link">Frutas</a>
+               </li>
+ 
+               <li>
+                 <a href="" class="cst-dropdown-link">Produtos derivados</a>
+               </li>
+             </ul>
+           </li>
+           <li class="cst-nav-item">
+             <a href="" class="cst-nav-link">Ofertas</a>
+           </li>
+           <li class="cst-nav-item">
+             <a href="" class="cst-nav-link">Sobre nós</a>
+           </li>
+           <li class="cst-nav-item">
+             <a href="" class="cst-nav-link">Contato</a>
+           </li>
+ 
+   
+         </ul>
+        
+       </div>
+     </div>
+    </nav>
+ 
+   </header>
