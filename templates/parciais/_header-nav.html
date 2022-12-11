@@ -1,4 +1,5 @@
 {% load static %}
+{%load omfilters%}
 <header>
     <div class="topbar">
      <div class="container-xxl">
@@ -27,19 +28,26 @@
              </ul> 
  
              <div class="myAccount-nav">
-               <span><a href=""><i class="bi bi-gear"> Sua conta</i></a></span>
+               <span><a href=""><i class="bi bi-gear"> Sua conta</i><i class="bi bi-caret-down mx-1"></i></a></span>
                <ul class="myAccount-dropdown">
+                {% if request.user.is_authenticated %}
                  <li>
-                   <a href="">Orders</a>
+                   <a href="{% url 'pedido:lista'%}">Pedidos</a>
                  </li>
  
                  <li>
-                   <a href="">My profile</a>
+                   <a href="{% url 'perfil:criar'%}">Atualizar</a>
                  </li>
  
                  <li>
-                   <a href="">Logout</a>
+                   <a href="{% url 'perfil:logout'%}">Sair</a>
                  </li>
+                 {% else %}
+                 <li>
+                  <a href="{% url 'perfil:criar'%}">Cadastre-se</a>
+                </li>
+                {%endif%}
+
                </ul>
              </div>
            </div>
@@ -79,7 +87,13 @@
  
              <div class="sign-register">
                <i class="bi bi-person"></i>
-               <p><a href="">Cadastre-se</a><br> ou <a href="">Entre</a></p>
+               {% if request.user.is_authenticated %}
+               <p><a href="{% url 'perfil:criar'%}">Bem vindo,</a><br><a href="{% url 'perfil:criar'%}"> <span class="">{{user}}</span></a></p>
+               
+               {%else%}
+               <p><a href="{% url 'perfil:criar'%}">Cadastre-se</a><br> ou <a href="{% url 'perfil:criar'%}">Entre</a></p>
+               
+               {%endif%}
                
              </div>
  
@@ -91,28 +105,27 @@
  
              <div class="my-cart-widget">
                <button class="btn position-relative">
-                 <i class="bi bi-bag"></i>
-                 <span class="position-absolute translate-middle badge rounded-pill bg-success mt-4 ms-0">5</span>
+                 <a href="{% url 'produto:carrinho'%}"><i class="bi bi-bag"></i></a>
+                 {% if request.session.carrinho %}
+                 <span class="position-absolute translate-middle badge rounded-pill bg-success mt-4 ms-0">{{request.session.carrinho | cart_total_qtd}}</span>
+                 {%else%}
+                 <span class="position-absolute translate-middle badge rounded-pill bg-success mt-4 ms-0" style="font-size: 10px;">vazio</span>
+                 {% endif %}
                </button>
                <span>Carrinho</span>
                
                <div class="my-cart-list">
                  <ul>
                    <li>
-                     <a href="">
-                       <img src="{% static 'image/images.jpg'%}" alt="" class="cart-prod-img">
-                       <h6>Adiddas Maxximum Confort</h6>
-                       <div class="cart-prod-rate">R$ 29,90</div>
+                     <a href="{% url 'produto:carrinho'%}">
+                       <h6>Clique para ver o carrinho:</h6>
+                       {% if request.session.carrinho %}
+                       <div class="cart-prod-rate">{{request.session.carrinho | cart_total_qtd}} itens adicionados</div>
+                       {% endif %}
                      </a>
                    </li>
  
-                   <li>
-                     <a href="">
-                       <img src="{% static 'image/images.jpg'%}" alt="" class="cart-prod-img">
-                       <h6>Adiddas Maxximum Confort</h6>
-                       <div class="cart-prod-rate">R$ 29,90</div>
-                     </a>
-                   </li>
+                   
                  </ul>
                </div>
              </div>
